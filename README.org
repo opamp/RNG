@@ -1,0 +1,35 @@
+#+TITLE: rng
+
+* 概要
+rngは簡易的なテスト用ファイル生成ツールです。
+下記のファイルを生成できます。
+
+- 任意の文字列の繰り返しを含むテキストファイル
+- 任意の数値（バイナリ）の繰り返しを含むバイナリファイル
+- ランダムなバイナリの繰り返しを含むバイナリファイル
+
+* 使用方法
+rngは下記の通りのコマンドで使用できます。
+
+#+BEGIN_SRC 
+rng mode count output/file/path
+#+END_SRC
+
+
+modeには下記のいずれかを指定します。
+
+- binary=1,2,3
+- text=sometext
+- textnl=sometext
+- rand
+- randtxt
+- fastrand=seed
+
+countには、繰り返し回数を0以上の数値で指定します。0の場合は空ファイルが生成されます。
+
+output/file/pathは出力するファイルを指定します。指定ファイルは追記モードで開くため、
+既存のファイルが存在する場合は追記されます。
+
+* License
+
+See License.txt
